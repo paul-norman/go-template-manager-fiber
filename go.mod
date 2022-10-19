@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/gofiber/fiber/v2 v2.38.1
-	github.com/paul-norman/go-template-manager v0.0.0-20221019083920-4f3a29bd1556
+	github.com/paul-norman/go-template-manager v0.0.0-20221019103958-3eab514d90a2
 )
 
 require (

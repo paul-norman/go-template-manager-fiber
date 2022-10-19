@@ -17,7 +17,10 @@ import (
 )
 
 func main() {
-	engine := TM.New("./views", ".html")
+	engine := TM.Init("./views", ".html")
+	engine.ExcludeDirectories([]string{"layouts", "partials"}).
+			Reload(true).
+			Debug(true)
 
 	app := fiber.New(fiber.Config{
 		Views: engine,
@@ -29,6 +32,6 @@ func main() {
 		})
 	})
 
-	log.Fatal(app.Listen(":3000"))
+	log.Fatal(app.Listen(":8080"))
 }
 ```
